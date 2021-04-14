@@ -28,8 +28,10 @@ class _JamBottomBarState extends State<JamBottomBar> {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) =>
-                JamProfileScreen(name: 'Sahachan'),
+            builder: (BuildContext context) => JamProfileScreen(
+              name: 'Sahachan',
+              address: 'Thailand Pinonist',
+            ),
           ),
           (route) => false,
         );

@@ -8,7 +8,14 @@ import 'package:jam_music_platform/screen/jam_main_screen.dart';
 class JamProfileScreen extends StatelessWidget {
   static String tag = 'ProfileScreen';
   String name;
-  JamProfileScreen({this.name});
+  String address;
+  JamProfileScreen({this.name, this.address});
+  List<String> picture = [
+    'assets/image/music1.jpg',
+    'assets/image/music2.jpg',
+    'assets/image/music3.jpg',
+    'assets/image/music4.jpg'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,16 +24,20 @@ class JamProfileScreen extends StatelessWidget {
         leading: 'assets/icon/Arrow - Left 2_0.png',
         function: () => {
           Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => JamMainScreen(),
-              ),
-              (route) => false)
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => JamMainScreen(),
+            ),
+            (route) => false,
+          )
         },
       ),
       body: Column(
         children: [
-          JamProfileInfo(),
+          JamProfileInfo(
+            name: this.name,
+            address: this.address,
+          ),
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
@@ -34,7 +45,7 @@ class JamProfileScreen extends StatelessWidget {
                 20,
                 (index) {
                   return JamContent(
-                    content: 'item $index',
+                    content: picture[index % 4],
                     margin: 10,
                   );
                 },

@@ -6,6 +6,12 @@ import 'package:jam_music_platform/component/jam_content_picture.dart';
 
 class JamMainScreen extends StatelessWidget {
   static String tag = 'MainScreen';
+  List<String> picture = [
+    'assets/image/music1.jpg',
+    'assets/image/music2.jpg',
+    'assets/image/music3.jpg',
+    'assets/image/music4.jpg'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +28,9 @@ class JamMainScreen extends StatelessWidget {
               child: Column(
                 children: [
                   JamContent(
-                    content: 'item $index',
+                    content: picture[index % 4],
                     margin: 0,
+                    scale: 0.5,
                   ),
                   JamCommnet(),
                 ],

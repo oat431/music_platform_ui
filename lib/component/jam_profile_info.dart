@@ -70,6 +70,9 @@ class JamProfileInfo extends StatelessWidget {
               children: [
                 Text(
                   this.name,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(this.address),
               ],

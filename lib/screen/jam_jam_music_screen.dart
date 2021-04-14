@@ -39,7 +39,7 @@ class JamMusicScreen extends StatelessWidget {
                   JamContent(
                     content: picture[index % 4],
                     margin: 0,
-                    scale: 1,
+                    scale: 0.5,
                   ),
                   JamCommnet(),
                 ],

@@ -37,6 +37,14 @@ flutter:
     - assets/icon/Arrow - Left 2_0.png
     - assets/icon/Arrow - Left 2_1.png
     - assets/icon/Arrow - Left 2.png
+    - assets/icon/Bag.png
+    - assets/icon/Bookmark.png
+    - assets/icon/Paper Plus.png
+    - assets/icon/Category.png
+    - assets/image/music1.jpg
+    - assets/image/music2.jpg
+    - assets/image/music3.jpg
+    - assets/image/music4.jpg
   fonts:
     - family: SFProText
       fonts:

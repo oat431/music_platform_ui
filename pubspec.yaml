@@ -51,6 +51,16 @@ flutter:
     - assets/image/music2.jpg
     - assets/image/music3.jpg
     - assets/image/music4.jpg
+    - assets/image/Group 2.png
+    - assets/image/Group 3.png
+    - assets/image/Group 4.png
+    - assets/image/Group 5.png
+    - assets/image/Group 6.png
+    - assets/image/Group 7.png
+    - assets/image/Group 8.png
+    - assets/image/Group 9.png
+    - assets/image/Group 10.png
+    - assets/image/Group 6852.png
   fonts:
     - family: SFProText
       fonts:

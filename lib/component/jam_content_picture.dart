@@ -26,6 +26,7 @@ class JamContent extends StatelessWidget {
         child: Image.asset(
           this.content,
           scale: this.scale,
+          fit: BoxFit.cover,
         ),
       ),
     );

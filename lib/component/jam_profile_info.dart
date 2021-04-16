@@ -23,7 +23,7 @@ class JamProfileInfo extends StatelessWidget {
 
   Widget _contentBox(Widget child) {
     return Container(
-      margin: EdgeInsets.all(12),
+      margin: EdgeInsets.all(20),
       child: child,
     );
   }
@@ -64,17 +64,25 @@ class JamProfileInfo extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
               children: [
-                Text(
-                  this.name,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                Container(
+                  margin: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.width / 10, top: 11),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        this.name,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(this.address),
+                    ],
                   ),
                 ),
-                Text(this.address),
               ],
             ),
             Row(

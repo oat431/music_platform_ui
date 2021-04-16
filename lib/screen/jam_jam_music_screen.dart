@@ -7,10 +7,16 @@ import 'package:jam_music_platform/component/jam_floating_bottom_bar.dart';
 
 class JamMusicScreen extends StatelessWidget {
   List<String> picture = [
-    'assets/image/music1.jpg',
-    'assets/image/music2.jpg',
-    'assets/image/music3.jpg',
-    'assets/image/music4.jpg'
+    'assets/image/music4.jpg',
+    'assets/image/Group 2.png',
+    'assets/image/Group 3.png',
+    'assets/image/Group 4.png',
+    'assets/image/Group 5.png',
+    'assets/image/Group 6.png',
+    'assets/image/Group 7.png',
+    'assets/image/Group 8.png',
+    'assets/image/Group 9.png',
+    'assets/image/Group 10.png'
   ];
   static String tag = "MusicScreen";
   @override
@@ -21,23 +27,24 @@ class JamMusicScreen extends StatelessWidget {
         leading: 'assets/icon/Arrow - Left 2_0.png',
         function: () => {
           Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) => JamMainScreen(),
-              ),
-              (route) => false)
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => JamMainScreen(),
+            ),
+            (route) => false,
+          )
         },
       ),
       body: GridView.count(
         crossAxisCount: 1,
         children: List.generate(
-          20,
+          picture.length,
           (index) {
             return Container(
               child: Column(
                 children: [
                   JamContent(
-                    content: picture[index % 4],
+                    content: picture[index],
                     margin: 0,
                     scale: 0.5,
                   ),

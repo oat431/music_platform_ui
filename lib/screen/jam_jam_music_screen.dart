@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:jam_music_platform/component/jam_comment.dart';
 import 'package:jam_music_platform/component/jam_top_bar.dart';
 import 'package:jam_music_platform/screen/jam_main_screen.dart';
@@ -35,25 +36,79 @@ class JamMusicScreen extends StatelessWidget {
           )
         },
       ),
-      body: GridView.count(
-        crossAxisCount: 1,
-        children: List.generate(
-          picture.length,
-          (index) {
-            return Container(
-              child: Column(
-                children: [
-                  JamContent(
-                    content: picture[index],
-                    margin: 0,
-                    scale: 0.5,
-                  ),
-                  JamCommnet(),
-                ],
+      body: Column(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height / 10,
+            child: Expanded(
+              child: Swiper(
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                    decoration: BoxDecoration(
+                      color: Colors.blue[400],
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '1',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          '--',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          '13',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                itemCount: 10,
+                viewportFraction: 0.2,
+                scale: 0.4,
               ),
-            );
-          },
-        ),
+            ),
+          ),
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 1,
+              children: List.generate(
+                picture.length,
+                (index) {
+                  return Container(
+                    child: Column(
+                      children: [
+                        JamContent(
+                          content: picture[index],
+                          margin: 0,
+                          scale: 0.5,
+                        ),
+                        JamCommnet(),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+        ],
       ),
       extendBody: true,
       bottomNavigationBar: JamBottomBar(),

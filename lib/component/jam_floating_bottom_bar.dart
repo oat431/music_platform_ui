@@ -1,4 +1,4 @@
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:jam_music_platform/screen/jam_profile_screen.dart';
 import 'package:jam_music_platform/screen/jam_main_screen.dart';
 import 'package:flutter/material.dart';
@@ -44,23 +44,26 @@ class _JamBottomBarState extends State<JamBottomBar> {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingNavbar(
+    return CustomNavigationBar(
       onTap: (int index) => {setState(() => _index = index), _checkScreen()},
       currentIndex: _index,
       items: [
-        FloatingNavbarItem(icon: Icons.home_rounded, title: ''),
-        FloatingNavbarItem(icon: Icons.add_circle_outline, title: ''),
-        FloatingNavbarItem(icon: Icons.person_outline_rounded, title: '')
+        CustomNavigationBarItem(
+          icon: Image.asset('assets/icon/home_3.png'),
+        ),
+        CustomNavigationBarItem(
+          icon: Image.asset('assets/icon/PlusCircle.png'),
+        ),
+        CustomNavigationBarItem(
+          icon: Image.asset('assets/icon/UserCircle.png'),
+        ),
       ],
-      fontSize: 1,
+      iconSize: 30,
       backgroundColor: Colors.white,
-      borderRadius: 30,
-      unselectedItemColor: Colors.black,
-      selectedItemColor: Colors.black,
-      width: 356,
-      iconSize: 36,
-      padding: EdgeInsets.only(top: 2, bottom: 2),
-      margin: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      unSelectedColor: Colors.black,
+      selectedColor: Colors.black,
+      borderRadius: Radius.circular(30),
+      isFloating: true,
     );
   }
 }

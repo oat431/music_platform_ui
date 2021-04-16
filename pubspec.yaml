@@ -11,7 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  floating_bottom_navigation_bar: ^1.4.1
+  custom_navigation_bar: ^0.8.1
+  flutter_swiper: ^1.1.6
   cupertino_icons: ^1.0.2
   camera: ^0.8.1
 
@@ -47,6 +48,9 @@ flutter:
     - assets/icon/Bookmark.png
     - assets/icon/Paper Plus.png
     - assets/icon/Category.png
+    - assets/icon/PlusCircle.png
+    - assets/icon/home_3.png
+    - assets/icon/UserCircle.png
     - assets/image/music1.jpg
     - assets/image/music2.jpg
     - assets/image/music3.jpg

@@ -1,8 +1,8 @@
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:jam_music_platform/component/jam_top_bar.dart';
 import 'package:jam_music_platform/screen/jam_main_screen.dart';
 import 'package:jam_music_platform/component/jam_swiper_rank.dart';
-import 'package:jam_music_platform/component/jam_content_info.dart';
 import 'package:jam_music_platform/component/jam_floating_bottom_bar.dart';
 import 'package:jam_music_platform/component/music_jammer_layout/jam_music_jammer_layout.dart';
 
@@ -38,33 +38,21 @@ class JamMusicScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Expanded(
-            child: GridView.count(
-              crossAxisCount: 1,
-              children: List.generate(
-                picture.length,
-                (index) {
-                  return Container(
-                    child: Column(
-                      children: [
-                        JamMusicScreenPictureLayout(
-                          content: picture[index],
-                          margin: 0,
-                          scale: 0.5,
-                        ),
-                        JamContentInfo(),
-                      ],
-                    ),
-                  );
-                },
-              ),
+          ListView(
+            children: List.generate(
+              picture.length,
+              (index) {
+                return JamMusicScreenPictureLayout(
+                  content: picture[index],
+                  margin: 0,
+                  scale: 0.5,
+                );
+              },
             ),
           ),
           Container(
             height: MediaQuery.of(context).size.height / 10,
-            child: Expanded(
-              child: JamSwiper(),
-            ),
+            child: JamSwiper(),
           ),
         ],
       ),

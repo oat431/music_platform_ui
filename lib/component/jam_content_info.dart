@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:expandable/expandable.dart';
 import 'package:jam_music_platform/screen/jam_profile_screen.dart';
 
 class JamContentInfo extends StatelessWidget {
@@ -39,43 +38,6 @@ class JamContentInfo extends StatelessWidget {
   }
 
   var rand = new Random();
-
-  Widget _contentInfo(BuildContext context) {
-    return ExpandableNotifier(
-      child: Column(
-        children: [
-          Expandable(
-            collapsed: ExpandableButton(
-              child: Icon(
-                Icons.keyboard_arrow_down,
-              ),
-            ),
-            expanded: Column(
-              children: [
-                Row(
-                  children: [
-                    Image.asset('assets/image/music4.jpg'),
-                  ],
-                ),
-                Container(
-                  child: Text('something'),
-                ),
-                Container(
-                  child: Text('someting'),
-                ),
-                ExpandableButton(
-                  child: Icon(
-                    Icons.keyboard_arrow_up,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(right: 30, left: 30, top: 10),
@@ -114,7 +76,6 @@ class JamContentInfo extends StatelessWidget {
               ),
             ],
           ),
-          _contentInfo(context),
         ],
       ),
     );

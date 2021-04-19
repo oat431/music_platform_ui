@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:jam_music_platform/component/jam_comment.dart';
 import 'package:jam_music_platform/component/jam_top_bar.dart';
 import 'package:jam_music_platform/screen/jam_main_screen.dart';
+import 'package:jam_music_platform/component/jam_swiper_rank.dart';
+import 'package:jam_music_platform/component/jam_content_info.dart';
 import 'package:jam_music_platform/component/jam_floating_bottom_bar.dart';
 import 'package:jam_music_platform/component/music_jammer_layout/jam_music_jammer_layout.dart';
 
@@ -52,7 +52,7 @@ class JamMusicScreen extends StatelessWidget {
                           margin: 0,
                           scale: 0.5,
                         ),
-                        JamCommnet(),
+                        JamContentInfo(),
                       ],
                     ),
                   );
@@ -63,48 +63,7 @@ class JamMusicScreen extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height / 10,
             child: Expanded(
-              child: Swiper(
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                        color: Colors.blue[400],
-                        borderRadius: BorderRadius.circular(25)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '1',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(
-                          '-',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(
-                          '13',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-                itemCount: 10,
-                viewportFraction: 0.2,
-                scale: 0.4,
-              ),
+              child: JamSwiper(),
             ),
           ),
         ],

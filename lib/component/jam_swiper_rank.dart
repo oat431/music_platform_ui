@@ -8,7 +8,7 @@ class JamSwiper extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return Container(
           decoration: BoxDecoration(
-              color: Colors.blue[400], borderRadius: BorderRadius.circular(25)),
+              color: Colors.blue[400], borderRadius: BorderRadius.circular(30)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,

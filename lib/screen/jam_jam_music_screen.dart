@@ -36,7 +36,7 @@ class JamMusicScreen extends StatelessWidget {
           )
         },
       ),
-      body: Column(
+      body: Stack(
         children: [
           Container(
             height: MediaQuery.of(context).size.height / 10,

@@ -10,7 +10,7 @@ class JamProfileInfo extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height / height,
       width: MediaQuery.of(context).size.width / width,
-      margin: EdgeInsets.only(right: 12, left: 12, top: 12),
+      margin: EdgeInsets.only(right: 12, left: 12, top: 11),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(pictureName),

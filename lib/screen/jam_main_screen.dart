@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jam_music_platform/component/jam_top_bar.dart';
 import 'package:jam_music_platform/component/jam_floating_bottom_bar.dart';
 import 'package:jam_music_platform/component/jam_comment.dart';
-import 'package:jam_music_platform/component/jam_content_picture.dart';
+import 'package:jam_music_platform/component/music_jammer_layout/jam_layout.dart';
 import 'dart:math';
 
 class JamMainScreen extends StatelessWidget {
@@ -33,7 +33,7 @@ class JamMainScreen extends StatelessWidget {
             return Container(
               child: Column(
                 children: [
-                  JamContent(
+                  JamMainScreenPictureLayout(
                     content: picture[rand.nextInt(8)],
                     margin: 0,
                     scale: 0.5,

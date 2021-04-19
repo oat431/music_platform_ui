@@ -12,56 +12,52 @@ class JamMusicScreenPictureLayout extends StatelessWidget {
   JamMusicScreenPictureLayout({this.content, this.margin, this.scale});
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Stack(
-          children: [
-            JamContent(
-              content: content,
-              margin: margin,
-              scale: scale,
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 270, left: 30),
-              child: GestureDetector(
-                onTap: () => {print('someChat')},
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.chat,
-                      color: Colors.white,
-                    ),
-                    Text(
-                      '120k',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ],
+    return ExpandableNotifier(
+      child: Column(
+        children: [
+          Stack(
+            children: [
+              JamContent(
+                content: content,
+                margin: margin,
+                scale: scale,
+              ),
+              ExpandableButton(
+                child: Container(
+                  margin: EdgeInsets.only(top: 270, left: 30),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.chat,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        '120k',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-        JamContentInfo(),
-        SizedBox(
-          height: 15,
-        ),
-        ExpandableNotifier(
-          child: ScrollOnExpand(
-            child: JamContentDescription(),
+            ],
           ),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-        ExpandableNotifier(
-          child: ScrollOnExpand(
+          JamContentInfo(),
+          SizedBox(
+            height: 10,
+          ),
+          ExpandableNotifier(
+            child: ScrollOnExpand(
+              child: JamContentDescription(),
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          ScrollOnExpand(
             child: JamCommnet(),
           ),
-        ),
-        SizedBox(
-          height: 15,
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -3,15 +3,18 @@ import 'package:flutter/material.dart';
 
 class JamCommnet extends StatelessWidget {
   Widget _comment(String name, String content) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          name,
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        Text(content),
-      ],
+    return Container(
+      margin: EdgeInsets.only(top: 5, bottom: 5, left: 40),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            name,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(content),
+        ],
+      ),
     );
   }
 
@@ -19,7 +22,7 @@ class JamCommnet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expandable(
       collapsed: ExpandableButton(
-        child: Icon(Icons.chat),
+        child: Text(''),
       ),
       expanded: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -27,9 +30,12 @@ class JamCommnet extends StatelessWidget {
           ExpandableButton(
             child: Icon(Icons.chat),
           ),
-          _comment('name:', 'content'),
-          _comment('name:', 'content'),
-          _comment('name:', 'content'),
+          _comment('Sahachan T : ', 'I love it very nice'),
+          _comment('Passakorn P :', 'Hey keep doing it'),
+          _comment('FLower O : ', 'Can I Jam you sometime?'),
+          SizedBox(
+            height: 25,
+          ),
         ],
       ),
     );

@@ -40,6 +40,31 @@ class JamMusicScreenPictureLayout extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 130, left: 30),
+                child: Column(
+                  children: [
+                    RotatedBox(
+                      quarterTurns: 3,
+                      child: Text(
+                        'Disallow to Jam\nand advertising',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    RotatedBox(
+                      quarterTurns: 3,
+                      child: Icon(
+                        Icons.shield,
+                        color: Colors.grey,
+                        size: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
                 margin: EdgeInsets.only(
                     top: 250, left: MediaQuery.of(context).size.width * 0.46),
                 child: Column(

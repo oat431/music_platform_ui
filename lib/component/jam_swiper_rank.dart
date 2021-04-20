@@ -37,6 +37,7 @@ class JamSwiper extends StatelessWidget {
       itemCount: 10,
       viewportFraction: 0.2,
       scale: 0.4,
+      fade: 0.1,
     );
   }
 }

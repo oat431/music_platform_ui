@@ -44,8 +44,8 @@ class JamContentDescription extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Name'),
-                  Text('address'),
+                  Text('Sirapanijm'),
+                  Text('Thailnd, Vocalist'),
                 ],
               ),
             ],
@@ -57,12 +57,14 @@ class JamContentDescription extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _contentBox(
-                      Text('instrumental : musician',
-                          textAlign: TextAlign.left),
+                      Text(
+                        'Vocalist : Siapanjam',
+                        textAlign: TextAlign.left,
+                      ),
                       context),
                   _contentBox(
                       Text(
-                          'something something something somethigns omsehtimg somsoeoasjfkl;asd;lkj',
+                          'Lylics : Sirapanjam \nDance with me under the diamonds \nSee me like breath in the cold\nSleep with me here in the silence\nCome kiss me, silver and gold\nYou say that  I won\'t lose you \nBut you can\'t predict the future\nSo, just hold on like you will never let go\nYeah, if you every move on without me\nI need to make sure you know\nThat you are the only on I\'ll ever love\n(I gotta tel ya, gotta tell ya)\nYeah,you,it it\'s not you it\'s not anyone\n(I gotta tel ya, gotta tell ya)\nLooking back on my life, you\'re the only good I\'ve',
                           textAlign: TextAlign.left),
                       context),
                 ],

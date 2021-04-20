@@ -52,7 +52,7 @@ class JamMusicScreen extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(left: 60, right: 60),
             height: MediaQuery.of(context).size.height / 10,
-            width: MediaQuery.of(context).size.height / 3,
+            width: MediaQuery.of(context).size.width,
             child: JamSwiper(),
           ),
         ],

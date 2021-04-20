@@ -1,4 +1,3 @@
-import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:jam_music_platform/component/jam_top_bar.dart';
 import 'package:jam_music_platform/screen/jam_main_screen.dart';
@@ -51,7 +50,9 @@ class JamMusicScreen extends StatelessWidget {
             ),
           ),
           Container(
+            margin: EdgeInsets.only(left: 60, right: 60),
             height: MediaQuery.of(context).size.height / 10,
+            width: MediaQuery.of(context).size.height / 3,
             child: JamSwiper(),
           ),
         ],

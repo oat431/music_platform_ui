@@ -24,7 +24,7 @@ class JamMusicScreenPictureLayout extends StatelessWidget {
               ),
               ExpandableButton(
                 child: Container(
-                  margin: EdgeInsets.only(top: 270, left: 30),
+                  margin: EdgeInsets.only(top: 280, left: 30),
                   child: Row(
                     children: [
                       Icon(
@@ -37,6 +37,58 @@ class JamMusicScreenPictureLayout extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                    top: 250, left: MediaQuery.of(context).size.width * 0.46),
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.add_circle_outline,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Jam',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                    top: 230, left: MediaQuery.of(context).size.width * 0.75),
+                child: Row(
+                  children: [
+                    Text(
+                      'Save To',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Icon(
+                      Icons.bookmark,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(
+                    top: 280, left: MediaQuery.of(context).size.width * 0.8),
+                child: Row(
+                  children: [
+                    Text(
+                      '120k',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Icon(
+                      Icons.remove_red_eye_outlined,
+                      color: Colors.grey,
+                    ),
+                  ],
                 ),
               ),
             ],
